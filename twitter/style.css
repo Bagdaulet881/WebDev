@@ -1,0 +1,191 @@
+    body {
+        background-color: rgb(113, 201, 248);
+        background-image: url("https://www.comp-web-pro.ru/wp-content/uploads/2015/07/kak-udalitsya-iz-tvitera-navsegda.png");
+        background-size: 70%;
+        background-repeat: no-repeat;
+    }
+    
+    #labels {
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        color: azure;
+    }
+    
+    input {
+        padding-top: 0px;
+        height: 60px;
+        width: 215px;
+        border: 0;
+        outline: 0;
+        background: rgb(25, 39, 52);
+        border-bottom: 3px solid rgb(136, 153, 166);
+        border-radius: 4px;
+    }
+    
+    input:hover {
+        border: 0;
+        outline: 0;
+        background: rgb(25, 39, 52);
+        border-bottom: 3px solid rgb(29, 161, 242);
+        border-radius: 4px;
+    }
+    
+    .right-side-block {
+        padding-top: 25px;
+        margin: 0 auto;
+        width: 70%;
+    }
+    
+    .inp {
+        width: 500px;
+    }
+    
+    .firstinp {
+        float: left;
+        padding-right: 11px;
+    }
+    
+    .secondinp {
+        float: left;
+        padding-right: 13px;
+    }
+    
+    .voity {
+        padding-top: 18px;
+        padding-right: 10px;
+    }
+    
+    .btn-voity {
+        background: transparent;
+        border-radius: 50px;
+        width: 67px;
+        height: 41px;
+        border: 1;
+        border-color: rgb(29, 161, 242);
+        color: rgb(29, 161, 242);
+        font-weight: 600;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    
+    .btns {
+        padding-left: 55px;
+    }
+    
+    .btn-voity:hover {
+        opacity: 0.6
+    }
+    
+    .label1 {
+        margin-bottom: 45px;
+        font-size: 21px;
+    }
+    
+    #linksmain {
+        position: absolute;
+        bottom: -10px;
+        left: 0px;
+        background-color: rgb(21, 32, 43);
+        width: 100%;
+        height: 14%;
+    }
+    
+    .links {
+        margin-right: 10px;
+        color: rgb(122, 120, 120);
+        font-family: monospace;
+    }
+    
+    #settings {
+        position: absolute;
+        right: 700px;
+        margin-top: 10px;
+        color: rgb(122, 120, 120);
+        font-family: monospace;
+    }
+    
+    #right-side {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0px;
+        top: -10px;
+        background-color: rgb(21, 32, 43);
+    }
+    
+    .rs {
+        position: relative;
+        margin-left: 150px;
+        top: 200px;
+        margin-bottom: 80px;
+        color: white;
+        font-family: sans-serif;
+        padding-left: 50px;
+    }
+    
+    #button1 {
+        position: relative;
+        left: 130px;
+        top: 130px;
+        background-color: rgb(29, 161, 242);
+        border-radius: 100px;
+        font-size: 20px;
+        color: azure;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        opacity: 1;
+        transition: 0.3s;
+    }
+    
+    #button1:hover {
+        opacity: 0.6;
+    }
+    
+    #button2:hover {
+        opacity: 0.6;
+    }
+    
+    #button2 {
+        opacity: 1;
+        transition: 0.3s;
+        position: relative;
+        left: 130px;
+        top: 150px;
+        background-color: transparent;
+        border: 1;
+        border-radius: 100px;
+        font-size: 20px;
+        color: rgb(29, 161, 242);
+        padding-left: 170px;
+        padding-right: 170px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-color: rgb(29, 161, 242);
+    }
+    
+    #picture2 {
+        color: white;
+        position: absolute;
+        width: 50px;
+        padding-left: 40px;
+        padding-top: 0px;
+        top: 200px;
+        left: 150px;
+    }
+    
+    .viewbox1 {
+        position: relative;
+        margin-bottom: 37px;
+        width: 30px;
+        fill: azure;
+    }
+    
+    #viewboxes {
+        position: absolute;
+        top: 210px;
+        left: 160px;
+    }
