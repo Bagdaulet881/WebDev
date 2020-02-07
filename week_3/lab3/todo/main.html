@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        TODO
+    </title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+        <div class="h1class">
+            <p>ToDo List</p>
+        </div>
+    </div>
+
+
+
+    <div class="main">
+        <h2 class="h2class">ToDo List</h2>
+        <div class="mainAdd">
+            <input type="text" id="newTask" placeholder="New Task">
+            <!--myInput-->
+            <span onclick="newTodo()" class="addBtn">Add</span>
+        </div>
+        </br>
+
+        <div class="tasks" id="tsk">
+        </div>
+
+    </div>
+
+    <script>
+        function deleteTodo(key) {
+            document.getElementById(key).style.display = 'none';
+        }
+
+        function doneTodo(key) {
+            if (key.checked != true) {
+                //false then remove 'done' class
+                document.getElementById(key.className).classList.remove("done");
+            } else {
+                //true add 'done' class Bakostagram
+                document.getElementById(key.className).classList.add("done");
+            }
+        }
+        var idCount = 0;
+
+        function newTodo() {
+            var inputValue = document.getElementById("newTask").value;
+            const todo = {
+                inputValue,
+                checked: false,
+                id: idCount,
+            };
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                var tsk = document.getElementById("tsk");
+                tsk.insertAdjacentHTML('beforeend', ` 
+                <label class="container" id="${idCount}">
+                <label id="text">
+                  ${inputValue}
+                </label>
+                <input type="checkbox" class="${idCount}" onClick="doneTodo(this)">
+                <span class="checkmark"></span>
+                <img src="redbasket.png" class="deleteBtn" id="${idCount}" onclick="deleteTodo(this.id)">
+                </label>`);
+                idCount++;
+                document.getElementById("newTask").value = '';
+                document.getElementById("newTask").focus = true;
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

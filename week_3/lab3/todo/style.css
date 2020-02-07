@@ -1,0 +1,184 @@
+p {
+    color: rgb(153, 149, 138);
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    padding-left: 60px;
+}
+
+.main {
+    text-align: left;
+    margin: auto;
+    width: 60%;
+}
+
+.mainAdd {
+    margin: auto;
+    width: 80%;
+}
+
+.h2class {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.tasks {
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+#task {
+    float: left;
+}
+
+#text {
+    padding-left: 30px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.container {
+    height: 75px;
+    margin-top: -5px;
+    padding: 15px;
+    padding-top: 25px;
+    border: solid;
+    border-width: thin;
+    border-radius: 7px;
+    border-color: rgb(215, 215, 215);
+    background-color: white;
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* hide default checkbox */
+
+.container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* ptichka */
+
+.checkmark {
+    position: absolute;
+    margin: 15px;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    margin-top: 27px;
+    border-radius: 3px;
+    border: solid;
+    border-width: thin;
+    border-color: rgb(215, 215, 215);
+    background-color: white;
+}
+
+
+/* mouse ON STYLE color of checkbox */
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/*checkbox CHECKED STYLE*/
+
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(34, 34, 34);
+    padding: 1px;
+    color: white;
+    text-align: left;
+}
+
+
+/* Input STYLE */
+
+input {
+    margin: 0;
+    border: solid;
+    border-radius: 3px;
+    border-width: thin;
+    border-color: rgb(215, 215, 215);
+    width: 85%;
+    padding: 10px;
+    padding-left: 15px;
+    float: left;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.deleteBtn {
+    height: 25px;
+    width: 30px;
+    float: right;
+}
+
+.addBtn {
+    padding: 10px;
+    padding-top: 13px;
+    height: 45px;
+    width: 70px;
+    background: rgb(51, 122, 183);
+    color: white;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.addBtn:hover {
+    background-color: rgb(79, 154, 219);
+}
