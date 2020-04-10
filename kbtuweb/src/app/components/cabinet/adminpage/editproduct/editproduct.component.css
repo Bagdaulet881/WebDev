@@ -185,10 +185,28 @@ hr.new1 {
 
 label {
     margin-left: 15px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    margin: 0 auto;
+>>>>>>> Admin Page, comments Done eeeeeee
+>>>>>>> AdminPage, Comments Done eeeeeee
 }
 
 .saveBtn {
     margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+
+label {
+    margin-left: 15px;
+    float: left;
+>>>>>>> Admin Page, comments Done eeeeeee
+>>>>>>> AdminPage, Comments Done eeeeeee
 }
