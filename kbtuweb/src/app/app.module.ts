@@ -16,15 +16,11 @@ import { EditproductComponent } from './components/cabinet/adminpage/editproduct
 import {FormsModule} from '@angular/forms';
 import { SigninpageComponent } from './components/cabinet/signinpage/signinpage.component';
 import { EditComponent } from './components/cabinet/adminpage/edit/edit.component';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { AddComponent } from './components/cabinet/adminpage/add/add.component';
 import { DeleteComponent } from './components/cabinet/adminpage/delete/delete.component';
 import { UsersComponent } from './components/cabinet/adminpage/users/users.component';
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthInterceptor} from './auth.interceptor';
 
 
 @NgModule({
@@ -41,33 +37,22 @@ import { UsersComponent } from './components/cabinet/adminpage/users/users.compo
     AdminpageComponent,
     EditproductComponent,
     SigninpageComponent,
-<<<<<<< HEAD
-    EditComponent
-=======
-<<<<<<< HEAD
-    EditComponent
-=======
     EditComponent,
     AddComponent,
     DeleteComponent,
     UsersComponent
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    FormsModule
-=======
-<<<<<<< HEAD
-    FormsModule
-=======
     FormsModule,
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

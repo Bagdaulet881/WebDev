@@ -1,18 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from  '../../../../services/product.service';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import {CommentService} from  '../../../../services/comment.service';
 import{ProductInterface}from '../../../../database/productInterface';
 import{CategoryInterface}from '../../../../database/categoryInterface';
-import { from } from 'rxjs';
-import { comments } from 'src/app/database/comments';
+import { from, Observable } from 'rxjs';
+// import { comments } from 'src/app/database/comments';
 import { CommentInterface } from 'src/app/database/commentInterface';
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 // import {CategoryService} from  '../.../../../../../category.service';
 @Component({
   selector: 'app-product-detail',
@@ -20,56 +14,35 @@ import { CommentInterface } from 'src/app/database/commentInterface';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-<<<<<<< HEAD
-item:any;
-category:any;
-=======
-<<<<<<< HEAD
-item:any;
-category:any;
-=======
 item: ProductInterface
 category: CategoryInterface
 comments: CommentInterface[]
 allcomments: CommentInterface[]
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
+comment2: CommentInterface
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private productService: ProductService,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     private commentService: CommentService,
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
     // private categoryService: CategoryService
   ) {
     this.router.events.subscribe((value =>{
       this.getProduct();
-      this.getCategory();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       this.getCommentsByProductId();
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
+      // this.getCategory();
+
     }));
   }
 
   ngOnInit(): void {
     this.getProduct();
-    this.getCategory();
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-  }
-=======
     this.getCommentsByProductId();
+    // this.getCategory();
+
+  }
+  split(text:string): any{
+    var splitted = text.split('\',');  
+    return splitted;
   }
   
   sendComment(login: string, text: string){
@@ -80,14 +53,17 @@ allcomments: CommentInterface[]
       date: string;
       text: string;
     }
+
     let newComment = new Comment();
-    newComment.id = this.autoIncrement();
+    newComment.id = 1;
     newComment.product_id = +this.route.snapshot.paramMap.get('id');
     newComment.login = login;
     newComment.date = new Date().toString();
     newComment.text = text;
     alert("sent!");
-    this.commentService.addComment(newComment).subscribe(comments => this.comments = comments);
+    this.commentService.addComment(newComment).subscribe(comment2 => this.comment2 = comment2);
+    window.location.reload();
+
   }
   autoIncrement(): number{
     this.getComments();
@@ -95,22 +71,26 @@ allcomments: CommentInterface[]
     nextId++;
     return nextId;
   }
+  
   getCommentsByProductId(){
     const id = +this.route.snapshot.paramMap.get('id');
     this.commentService.getCommentsByProductId(id).subscribe(comments => this.comments = comments);
-  }
-  getComments(){
-    this.commentService.getComments().subscribe(comments => this.allcomments = comments);
+    // this.comments2 = this.commentService.getCommentsByProductId(id);
   }
 
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
+  getComments(){
+    // this.commentService.getComments().subscribe(comments => this.allcomments = comments);
+  }
+
   getProduct() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getProduct(id).subscribe(item => this.item = item);
+
   }
-  getCategory(){
-    this.productService.getCategory(this.item.category_id).subscribe(category => this.category = category);
+  getCategory(category_id: number): string{
+    
+    this.productService.getCategory(category_id).subscribe(category => this.category = category);
+    return this.category.name;
   }
   getColor(indexOf:number){
     indexOf++;

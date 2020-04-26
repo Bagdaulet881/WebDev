@@ -7,22 +7,6 @@ import {ProductDetailComponent} from './components/shopping-cart/product-list/pr
 import {EditproductComponent} from './components/cabinet/adminpage/editproduct/editproduct.component'
 import {AdminpageComponent} from './components/cabinet/adminpage/adminpage.component'
 import {EditComponent} from './components/cabinet/adminpage/edit/edit.component'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> AdminPage, Comments Done eeeeeee
-const routes: Routes = [
-  {path: 'categories', component:CategoryComponent},
-  {path: 'categories/:id/products', component:ProductListComponent},
-  { path: '', redirectTo: 'categories', pathMatch: 'full'},
-  { path: 'products/:id', component: ProductDetailComponent},
-  {path: 'adminpage', component: AdminpageComponent},
-  {path: 'adminpage/editproduct/:id', component: EditproductComponent},
-  {path: 'adminpage/edit', component: EditComponent},
-
-<<<<<<< HEAD
-=======
-=======
 import {AddComponent} from './components/cabinet/adminpage/add/add.component'
 import { from } from 'rxjs';
 import { DeleteComponent } from './components/cabinet/adminpage/delete/delete.component';
@@ -41,8 +25,6 @@ const routes: Routes = [
   {path: 'adminpage/delete', component: DeleteComponent},
   {path: 'adminpage/users', component: UsersComponent},
   {path: 'signinpage', component: SigninpageComponent}
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 
 ];
 

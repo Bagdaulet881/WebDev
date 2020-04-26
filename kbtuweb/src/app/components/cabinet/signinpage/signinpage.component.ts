@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import { strict } from 'assert';
 import { RouterLink } from '@angular/router';
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 
 @Component({
   selector: 'app-signinpage',
@@ -19,10 +13,6 @@ export class SigninpageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   signin(login: string){
   //Coming SOON TODO
   document.getElementById("h5Hide").style.display = "block";
@@ -30,7 +20,5 @@ export class SigninpageComponent implements OnInit {
   document.getElementById("btnHide").style.display = "none";
 
   }
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 
 }

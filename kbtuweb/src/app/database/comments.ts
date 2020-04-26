@@ -9,6 +9,7 @@ export const comments: CommentInterface[]= [
     text: 'asdasnfhdjkalmdskfjkdlcakmdvjlcm s gsdg sdg  sdg s'
       //Bakosta
     },
+    
     {id:2,
     product_id:1,
     login: 'testingLogin',

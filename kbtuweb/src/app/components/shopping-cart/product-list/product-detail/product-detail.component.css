@@ -90,15 +90,7 @@ a:hover {
 
 .recipe {
     width: 800px;
-<<<<<<< HEAD
-    height: 800px;
-=======
-<<<<<<< HEAD
-    height: 800px;
-=======
     height: max-content;
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
     margin-left: 20px;
 }
 
@@ -163,10 +155,6 @@ hr.new3 {
 
 hr.new1 {
     border-top: 1px solid #666666;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 }
 
 .rightClmn {
@@ -179,6 +167,4 @@ hr.new1 {
 .photoComment {
     width: 80px;
     height: 80px;
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 }

@@ -3,15 +3,7 @@
     <div class="main1">
         <!-- --------------------------------------------------------------------------------------------------------- -->
         <div class="photo1">
-<<<<<<< HEAD
-            <a title="Заказать на Aliexpress" href="{{item.link}}" target="_blank">
-=======
-<<<<<<< HEAD
-            <a title="Заказать на Aliexpress" href="{{item.link}}" target="_blank">
-=======
             <a title="ммм еда" target="_blank">
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
                 <img class="photoSize" src="{{ item.image }}">
             </a>
         </div>
@@ -19,49 +11,27 @@
         <!-- --------------------------------------------------------------------------------------------------------- -->
         <div class="context1">
             <h3>
-<<<<<<< HEAD
-                <a id="title" title="Посмотреть на Aliexpress" href="{{item.link}}" target="_blank"> {{ item.name }}</a>
-=======
-<<<<<<< HEAD
-                <a id="title" title="Посмотреть на Aliexpress" href="{{item.link}}" target="_blank"> {{ item.name }}</a>
-=======
                 <a id="title" title="ммм еда" target="_blank"> {{ item.name }}</a>
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
             </h3>
             <!-- --------------------------------------------------------------------------------------------------------- -->
             <p *ngIf="item.rating">
-                <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png"> {{ item.rating }}
+                <img id="rating" src=""> {{ item.rating }}
             </p>
             <!-- --------------------------------------------------------------------------------------------------------- -->
             <h6 style="font-weight: bolder;">Cook: </h6>{{item.time}}
-            <h6 style="font-weight: bolder;">Level: </h6>{{category.name}}
+            <h6 style="font-weight: bolder;">Level: </h6>{{this.getCategory(item.category_id)}}
             <h6 style="font-weight: bolder;">Description: </h6>
             <p *ngIf="item.description">
                 <!-- Bakosta -->
-                {{ item.description }}
+                {{item.description}}
             </p>
             <!-- --------------------------------------------------------------------------------------------------------- -->
             <div class="share1">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> AdminPage, Comments Done eeeeeee
-                <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url={{item.link}}" data-action="share/whatsapp/share">
-                    <img id="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1024px-WhatsApp_logo-color-vertical.svg.png">
-                </a>
-
-                <a target="_blank" href="https://t.me/share/url?url={{item.link}}" data-action="share/whatsapp/share">
-<<<<<<< HEAD
-=======
-=======
                 <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url=" data-action="share/whatsapp/share">
                     <img id="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1024px-WhatsApp_logo-color-vertical.svg.png">
                 </a>
 
                 <a target="_blank" href="https://t.me/share/url?url=" data-action="share/whatsapp/share">
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
                     <img id="telegram" src="https://image.winudf.com/v2/image1/Y29tLndXaGF0c2FwcGpiXzg2MTY3NTRfaWNvbl8xNTUwNzI3OTE1XzA1OA/icon.png?w=170&fakeurl=1">
                 </a>
             </div>
@@ -71,13 +41,7 @@
     </div>
     <br>
 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 <!-- Ingredients and Methods -->
 <div class="recipe">
 
@@ -85,17 +49,9 @@
         <h4>Ingredients</h4>
         <hr class="new3">
         <div class="rectangle">
-            <div *ngFor="let ings of item.ingredients; let indexOf = index;">
+            <div *ngFor="let ings of this.split(item.ingredients); let indexOf = index;">
                 <div class="ingredientsItems" [style.background]="getColor(indexOf)">
-<<<<<<< HEAD
-                    {{ings}} + {{indexOf}}
-=======
-<<<<<<< HEAD
-                    {{ings}} + {{indexOf}}
-=======
                     {{ings}}
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
                 </div>
             </div>
         </div>
@@ -105,7 +61,7 @@
         <h4>Methods</h4>
         <hr class="new3">
         <div class="method-in">
-            <div *ngFor="let method of item.methods; let cnt = index;">
+            <div *ngFor="let method of  this.split(item.methods); let cnt = index;">
                 <div class="method-text">
                     <p><strong>{{cnt+1}}. </strong>{{method}}</p>
                     <hr class="new1">
@@ -114,10 +70,6 @@
         </div>
 
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 </div>
 <!-- COMMENTS -->
 <div class="rightClmn">
@@ -141,6 +93,4 @@
             </div>
         </li>
     </ul>
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
 </div>

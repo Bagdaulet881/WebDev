@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-export const categories = [
-=======
-<<<<<<< HEAD
-export const categories = [
-=======
 import{CategoryInterface} from './categoryInterface';
 
 export const categories: CategoryInterface[]= [
->>>>>>> Admin Page, comments Done eeeeeee
->>>>>>> AdminPage, Comments Done eeeeeee
     {
       // ez,normal,hard,fast,long
       id: 1,

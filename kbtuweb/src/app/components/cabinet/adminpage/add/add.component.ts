@@ -28,7 +28,7 @@ export class AddComponent implements OnInit {
     this.getProducts();
     this.getCategories();
   }
-  add(category_id:number,name: string, time: string, description: string, rating: string, image: string, ingredients: string, methods: string): void{
+  add(category_id:number,name: string, time: string, description: string, rating: number, image: string, ingredients: string, methods: string): void{
     class Product implements ProductInterface{
       id: number;
       category_id: number;
@@ -36,20 +36,20 @@ export class AddComponent implements OnInit {
       time: string;
       description: string;
       image: string;
-      rating: string;
-      ingredients: string[];
-      methods:string[];
+      rating: number;
+      ingredients: string;
+      methods:string;
     }
     let product = new Product();
     
     product.id=this.autoIncrement("prod");
-    product.category_id=category_id;
+    product.category_id = category_id;
     product.name = name;
     product.time=time;
     product.description=description;
     product.rating=rating;
     product.image=image;
-    product.ingredients = this.split(ingredients);
+    product.ingredients = this.split(ingredients);//TODO
     product.methods = this.split(methods);
     alert(this.autoIncrement("prod") + " th recipe added to category " + this.getCategory(product.category_id));
     this.productService.addItem(product);

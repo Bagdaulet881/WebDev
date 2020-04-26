@@ -1,3 +1,5 @@
+import {CategoryInterface} from '../database/categoryInterface';
+
 export interface ProductInterface {
     id: number;
     category_id: number;
@@ -5,8 +7,8 @@ export interface ProductInterface {
     time: string;
     description: string;
     image: string;
-    rating: string;
-    ingredients: string[];
-    methods:string[];
+    rating: number;
+    ingredients: string;
+    methods:string;
   }
   
