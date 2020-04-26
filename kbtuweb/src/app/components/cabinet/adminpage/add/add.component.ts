@@ -12,10 +12,13 @@ import {UserService} from  '../../../../services/user.service';
 })
 export class AddComponent implements OnInit {
   // private product: ProductInterface
-  items: any
-  category: any
+  items: ProductInterface[]
+  category: CategoryInterface
   categories: any
   selectedItem;
+  itemTemp: ProductInterface
+  catTemp: CategoryInterface
+  userTemp: UserInterface
   constructor( 
     private productService: ProductService,
     private userService: UserService
@@ -26,8 +29,10 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
-    this.getCategories();
+    // this.getCategories();
   }
+  // ----------------------------------------------------------------------ADD FUNCTIONS----------------------------------------------------------------------
+
   add(category_id:number,name: string, time: string, description: string, rating: number, image: string, ingredients: string, methods: string): void{
     class Product implements ProductInterface{
       id: number;
@@ -41,18 +46,19 @@ export class AddComponent implements OnInit {
       methods:string;
     }
     let product = new Product();
-    
-    product.id=this.autoIncrement("prod");
+    product.id=8;
     product.category_id = category_id;
     product.name = name;
     product.time=time;
     product.description=description;
     product.rating=rating;
     product.image=image;
-    product.ingredients = this.split(ingredients);//TODO
-    product.methods = this.split(methods);
-    alert(this.autoIncrement("prod") + " th recipe added to category " + this.getCategory(product.category_id));
-    this.productService.addItem(product);
+    product.ingredients = ingredients;//TODO
+    product.methods = methods;
+    this.productService.addItem(product).subscribe(itemTemp => this.itemTemp = itemTemp);
+    alert("[" + product.name + "'s recipe] added to category ");
+    // window.location.reload();
+
   }
   addCategory(name: string, time: string, link: string){
       class Category implements CategoryInterface{
@@ -63,32 +69,44 @@ export class AddComponent implements OnInit {
       }
       let cat = new Category();
 
-      cat.id = this.autoIncrement("cat");
+      cat.id = 8;
       cat.name = name;
       cat.time = time;
       cat.img_link = link;
-      alert(this.autoIncrement("cat") + " category added");
-      this.productService.addCategory(cat)
+      // alert(this.autoIncrement("cat") + " category added");
+      this.productService.addCategory(cat).subscribe(catTemp => this.catTemp = catTemp);
+      alert("[" + cat.name + " category] added");
+    // window.location.reload();
+      
   }
   addUser(name: string, lname: string,login: string, password: string, isSuperUser: string){
     class User implements UserInterface{
-      name: string;
-      lname: string;
-      login: string;
+      id: number;
+      first_name: string;
+      last_name: string;
+      username: string;
       password: string;
-      isSuperUser = false;
+      is_superuser: boolean;
+     
     }
     let user = new User();
-    user.name = name;
-    user.lname = lname;
-    user.login = login;
+    user.id = 8;
+    user.first_name = name;
+    user.last_name = lname;
+    user.username = login;
     user.password = password;
     if(isSuperUser == "true"){
-      user.isSuperUser = true;
+      user.is_superuser = true;
+    }else{
+      user.is_superuser = false;
     }
-    alert(user.name + " added");
-    this.userService.addUser(user);
+    this.userService.addUser(user).subscribe(userTemp => this.userTemp = userTemp);
+    alert("[" + user.username + " user] added");
+    // window.location.reload();
+
   }
+  // ----------------------------------------------------------------------JUST FUNCTIONS----------------------------------------------------------------------
+
   split(text:string): any{
     var splitted = text.split(/[\s,]+/);  
     return splitted;
@@ -104,15 +122,15 @@ export class AddComponent implements OnInit {
       return nextId;
     }
   }
+  // ----------------------------------------------------------------------GET FUNCTIONS----------------------------------------------------------------------
   getSelectedItem(): number{//used dropdown menu INPUT
     return this.selectedItem;
   }
   getProducts(){
     this.productService.getProducts().subscribe(items => this.items = items);
   }
-  getCategory(id: number): String{
+  getCategory(id: number){
     this.productService.getCategory(id).subscribe(category => this.category = category);
-    return this.category.name;
   }
   getCategories(){
     this.productService.getCategories().subscribe(categories => this.categories = categories);

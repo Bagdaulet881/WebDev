@@ -27,12 +27,12 @@
             <!-- ------------------------------CATEGORIES---------------------------------------------------- -->
 
             <li class="nav-item">
-                <a class="nav-link " routerLink="/adminpage/delete">Sponsors</a>
+                <a class="nav-link ">Sponsors</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <h5 id="h5Hide">Welcome, Admin!</h5><br>
-            <button id="btnHide" class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/signinpage">Sign in</button>
+            <h5 id="h5Hide">Welcome, {{this.getUser()}}!</h5><br>
+            <button id="btnHide" class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()" routerLink="/signinpage">Sign in</button>
             <button id="h5Hide2" class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="" (click)="logout()">Log Out</button>
 
         </form>

@@ -15,12 +15,14 @@
             <div id="editPanel">
                 <label for="inputPassword6">Name</label>
                 <div class="form-group">
-                    <input [(ngModel)]="category2.name" type="text" id="inputPassword6" class="form-control">
+                    <input #name [(ngModel)]="category2.name" type="text" id="inputPassword6" class="form-control">
                 </div>
                 <label for="inputPassword6">Time</label>
                 <div class="form-group">
-                    <input [(ngModel)]="category2.time" type="text" id="inputPassword6" class="form-control">
+                    <input #time [(ngModel)]="category2.time" type="text" id="inputPassword6" class="form-control">
                 </div>
+                <a class="btn btn-primary" style="color: white;" (click)="saveCategory(category2.id, time.value, name.value)">Save</a>
+
             </div>
         </div>
 

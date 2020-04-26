@@ -81,11 +81,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--393505_11.jpg?itok=lGqo7ui4',
 //       rating: '5.0',
 //       ingredients: [
-//         '120g plain flour','60g caster sugar','300g Braeburn apple','30g unsalted butter','115g blackberries','vanilla ice cream, to serve','60g unsalted butter at room temperature, cut into pieces'
+        // '120g plain flour','60g caster sugar','300g Braeburn apple','30g unsalted butter','115g blackberries','vanilla ice cream, to serve','60g unsalted butter at room temperature, cut into pieces'
 
 //           ],
 //       methods:[
-//         'Heat oven to 190C/170C fan/gas 5. Tip 120g plain flour and 60g caster sugar into a large bowl.','Add 60g unsalted butter, then rub into the flour using your fingertips to make a light breadcrumb texture. Do not overwork it or the crumble will become heavy.','Sprinkle the mixture evenly over a baking sheet and bake for 15 mins or until lightly coloured.','Meanwhile, for the compote, peel, core and cut 300g Braeburn apples into 2cm dice.','Put 30g unsalted butter and 30g demerara sugar in a medium saucepan and melt together over a medium heat. Cook for 3 mins until the mixture turns to a light caramel.','Stir in the apples and cook for 3 mins. Add 115g blackberries and ¼ tsp ground cinnamon, and cook for 3 mins more.','Cover, remove from the heat, then leave for 2-3 mins to continue cooking in the warmth of the pan.','To serve, spoon the warm fruit into an ovenproof gratin dish, top with the crumble mix, then reheat in the oven for 5-10 mins. Serve with vanilla ice cream.'
+        // 'Heat oven to 190C/170C fan/gas 5. Tip 120g plain flour and 60g caster sugar into a large bowl.','Add 60g unsalted butter, then rub into the flour using your fingertips to make a light breadcrumb texture. Do not overwork it or the crumble will become heavy.','Sprinkle the mixture evenly over a baking sheet and bake for 15 mins or until lightly coloured.','Meanwhile, for the compote, peel, core and cut 300g Braeburn apples into 2cm dice.','Put 30g unsalted butter and 30g demerara sugar in a medium saucepan and melt together over a medium heat. Cook for 3 mins until the mixture turns to a light caramel.','Stir in the apples and cook for 3 mins. Add 115g blackberries and ¼ tsp ground cinnamon, and cook for 3 mins more.','Cover, remove from the heat, then leave for 2-3 mins to continue cooking in the warmth of the pan.','To serve, spoon the warm fruit into an ovenproof gratin dish, top with the crumble mix, then reheat in the oven for 5-10 mins. Serve with vanilla ice cream.'
 
 //       ]
 //     }, {
@@ -97,11 +97,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1069547_10.jpg?itok=5Rrn9J-5',
 //       rating: '5.0',
 //       ingredients: [
-//         '1.1kg eating apples, such as Coxes','3-4 tbsp apricot jam','juice 1 large orange',  '100g plain flour','1 tbsp golden syrup','100g light muscovado sugar'
+        // '1.1kg eating apples, such as Coxes','3-4 tbsp apricot jam','juice 1 large orange',  '100g plain flour','1 tbsp golden syrup','100g light muscovado sugar'
 
 //           ],
 //       methods:[
-//         'Heat oven to 190C/fan 170C/gas 5. Peel, core and thinly slice the apples and mix with the jam and orange juice. Spread evenly over a buttered 1.5-litre ovenproof dish, not too deep.','Mix the oats, flour and cinnamon in a large bowl. Add the butter in small chunks and rub in gently. Stir in the sugar and rub in again. Drizzle over the syrup, mixing with a knife so it forms small clumps. Sprinkle evenly over the apples and bake for 30-35 mins until the juices from the apples start to bubble up. Cool for 10 mins, then serve with custard, cream or ice cream.'
+        // 'Heat oven to 190C/fan 170C/gas 5. Peel, core and thinly slice the apples and mix with the jam and orange juice. Spread evenly over a buttered 1.5-litre ovenproof dish, not too deep.','Mix the oats, flour and cinnamon in a large bowl. Add the butter in small chunks and rub in gently. Stir in the sugar and rub in again. Drizzle over the syrup, mixing with a knife so it forms small clumps. Sprinkle evenly over the apples and bake for 30-35 mins until the juices from the apples start to bubble up. Cool for 10 mins, then serve with custard, cream or ice cream.'
 
 //       ]
 //     },
@@ -116,11 +116,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/06/cherry-bruschettas.jpg?itok=BHMj3ngZ',
 //       rating: '5.0',
 //       ingredients: [
-//         '1 loaf ciabatta','extra virgin olive oil','100g ricotta','ne12 cherriesw','ne80g prosciuttow'
+        // '1 loaf ciabatta','extra virgin olive oil','100g ricotta','ne12 cherriesw','ne80g prosciuttow'
 
 //           ],
 //       methods:[
-//         'Heat the grill to its highest setting. Cut the ciabatta into 12 slices, then brush each slice on both sides, with a little extra virgin olive oil. Grill the bread for 2 mins each side.','Spread over the ricotta. Pit and halve the cherries and arrange them on top of the bruschetta with the prosciutto. Drizzle over some more olive oil to serve.'
+        // 'Heat the grill to its highest setting. Cut the ciabatta into 12 slices, then brush each slice on both sides, with a little extra virgin olive oil. Grill the bread for 2 mins each side.','Spread over the ricotta. Pit and halve the cherries and arrange them on top of the bruschetta with the prosciutto. Drizzle over some more olive oil to serve.'
 
 //       ]
 //     }, {
@@ -132,11 +132,10 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--285494_12.jpg?itok=TmzCrN2L',
 //       rating: '4.0',
 //       ingredients: [
-//         '140g bulgur wheat','1 tbsp olive oil','2 skinless salmon fillets',
-//         '6 spring onions','juice and zest ½ lemon','1 tbsp clear honey','juice 1 orange','200g trimmed fine green beans'
+        // '140g bulgur wheat','1 tbsp olive oil','2 skinless salmon fillets','6 spring onions','juice and zest ½ lemon','1 tbsp clear honey','juice 1 orange','200g trimmed fine green beans'
 //       ],
 //       methods:[
-//         'Cook the bulgur wheat following pack instructions. Heat the olive oil in a frying pan over a medium heat. Add the salmon fillets and cook for 3 mins on each side. Stir in the spring onions and cook for 1 min. Add lemon juice, honey, orange juice and zest to the pan and bubble for 1 min more to make a sauce.','Meanwhile, boil the green beans for 4 mins or until tender. Drain. Stir the bulgur wheat with a fork, mixing in the green beans, lemon zest and a little of the sauce. Serve the salmon on a bed of bulgur and beans, with the rest of the sauce spooned over.'
+        // 'Cook the bulgur wheat following pack instructions. Heat the olive oil in a frying pan over a medium heat. Add the salmon fillets and cook for 3 mins on each side. Stir in the spring onions and cook for 1 min. Add lemon juice, honey, orange juice and zest to the pan and bubble for 1 min more to make a sauce.','Meanwhile, boil the green beans for 4 mins or until tender. Drain. Stir the bulgur wheat with a fork, mixing in the green beans, lemon zest and a little of the sauce. Serve the salmon on a bed of bulgur and beans, with the rest of the sauce spooned over.'
 
 //       ]
 //     }, {
@@ -148,11 +147,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--160495_11.jpg?itok=v-Jq_AGd',
 //       rating: '5.0',
 //       ingredients: [
-//         '3 tbsp mascarpone','1 tbsp finely chopped rosemary','1 garlic clove, crushed','2 chicken breasts, skin on','4 slices prosciutto','nsplash olive oilew','juice of half a lemon'
+        // '3 tbsp mascarpone','1 tbsp finely chopped rosemary','1 garlic clove, crushed','2 chicken breasts, skin on','4 slices prosciutto','nsplash olive oilew','juice of half a lemon'
 
 //           ],
 //       methods:[
-//         'Heat oven to 200C/fan 180C/gas 6. Mix the mascarpone with the rosemary, garlic and seasoning. Place the chicken breasts on a board and lift, but don’t detach, the skin. Put a spoonful of the mascarpone mix under the skin of each breast. Wrap 2 slices of prosciutto around each, as neatly and tightly as you can, to keep the filling enclosed.','Heat a non-stick frying pan, add the olive oil and quickly brown the chicken on both sides. Transfer to a roasting tin, then finish off in the oven for 15-20 mins until just cooked.','Add the lemon juice to the roasting tin and stir over the heat, scraping off any crispy bits. Spoon the juices over the chicken and serve with potatoes and green beans.'
+        // 'Heat oven to 200C/fan 180C/gas 6. Mix the mascarpone with the rosemary, garlic and seasoning. Place the chicken breasts on a board and lift, but don’t detach, the skin. Put a spoonful of the mascarpone mix under the skin of each breast. Wrap 2 slices of prosciutto around each, as neatly and tightly as you can, to keep the filling enclosed.','Heat a non-stick frying pan, add the olive oil and quickly brown the chicken on both sides. Transfer to a roasting tin, then finish off in the oven for 15-20 mins until just cooked.','Add the lemon juice to the roasting tin and stir over the heat, scraping off any crispy bits. Spoon the juices over the chicken and serve with potatoes and green beans.'
 
 //       ]
 //     }, 
@@ -166,11 +165,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/pea-shakshuka.jpg?itok=5NcdTvZx',
 //       rating: '5.0',
 //       ingredients: [
-//         '1 bunch asparagus spears','200g sprouting broccoli','2 tbsp olive oil','2 spring onions, finely sliced','2 tsp cumin seeds','large pinch cayenne pepper, plus extra to serve','4 ripe tomatoes, chopped','1 small pack parsley, finely chopped','50g shelled peas','50g podded broad beans','4 large eggs','50g pea shoots','Greek yogurt and flatbreads'
+        // '1 bunch asparagus spears','200g sprouting broccoli','2 tbsp olive oil','2 spring onions, finely sliced','2 tsp cumin seeds','large pinch cayenne pepper, plus extra to serve','4 ripe tomatoes, chopped','1 small pack parsley, finely chopped','50g shelled peas','50g podded broad beans','4 large eggs','50g pea shoots','Greek yogurt and flatbreads'
 
 //           ],
 //       methods:[
-//         'Trim or snap the woody ends of the asparagus and finely slice the spears, leaving the tips and about 2cm at the top intact. Finely slice the broccoli in the same way, leaving the heads and about 2cm of stalk intact. Heat the oil in a frying pan. Add the spring onions, sliced asparagus and sliced broccoli, and fry gently until the veg softens a little, then add the cumin seeds, cayenne, tomatoes (with their juices), parsley and plenty of seasoning, and stir. Cover with a lid and cook for 5 mins to make a base sauce, then add the asparagus spears, broccoli heads, peas and broad beans, cover again and cook for 2 mins.','Make 4 dips in the mixture. Break an egg into each dip, arrange half the pea shoots around the eggs, season well, cover with a lid and cook until the egg whites are just set. Serve with the rest of the pea shoots, a spoonful of yogurt and some flatbreads, and sprinkle over another pinch of cayenne, if you like.'
+        // 'Trim or snap the woody ends of the asparagus and finely slice the spears, leaving the tips and about 2cm at the top intact. Finely slice the broccoli in the same way, leaving the heads and about 2cm of stalk intact. Heat the oil in a frying pan. Add the spring onions, sliced asparagus and sliced broccoli, and fry gently until the veg softens a little, then add the cumin seeds, cayenne, tomatoes (with their juices), parsley and plenty of seasoning, and stir. Cover with a lid and cook for 5 mins to make a base sauce, then add the asparagus spears, broccoli heads, peas and broad beans, cover again and cook for 2 mins.','Make 4 dips in the mixture. Break an egg into each dip, arrange half the pea shoots around the eggs, season well, cover with a lid and cook until the egg whites are just set. Serve with the rest of the pea shoots, a spoonful of yogurt and some flatbreads, and sprinkle over another pinch of cayenne, if you like.'
 
 //       ]
 //     }, {
@@ -182,11 +181,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1035742_11.jpg?itok=3GgK-2kL',
 //       rating: '5.0',
 //       ingredients: [
-//         '1 large leg of lamb, about 3kg/6lb 8oz','6 garlic cloves','1 bunch oregano','zest and juice 1 lemon','6 tbsp olive oil','1½ kg new potatoes','400g can chopped tomato','large handful pitted baby kalamata olives'
+        // '1 large leg of lamb, about 3kg/6lb 8oz','6 garlic cloves','1 bunch oregano','zest and juice 1 lemon','6 tbsp olive oil','1½ kg new potatoes','400g can chopped tomato','large handful pitted baby kalamata olives'
 
 //           ],
 //       methods:[
-//         'Heat oven to 240C/fan 220C/gas 9. Pound the garlic, half the oregano, lemon zest and a pinch of salt in a pestle and mortar, then add the lemon juice and a drizzle of olive oil. Stab the lamb all over with a sharp knife, then push as much of the herb paste as you can into the holes.','Tip the potatoes into a large roasting tin, then toss in the remaining olive oil and any remaining herb paste. Nestle the lamb amongst the potatoes, roast for 20 mins, then reduce the temperature to 180C/fan 160C/gas 4. Roast for 1 hr 15 mins for medium-rare, adding another 15 mins if you prefer your lamb medium. Baste the lamb once or twice with the juices and toss the potatoes. When the lamb is done to your liking, remove from the tin and let it rest. Throw the rest of the oregano in with the potatoes, scoop from the tin and keep warm.','Place the roasting tin over a medium flame, add the canned tomatoes and olives to the pan juices, then simmer for a few mins. Serve the lamb with the potatoes and sauce and a simple salad.'
+        // 'Heat oven to 240C/fan 220C/gas 9. Pound the garlic, half the oregano, lemon zest and a pinch of salt in a pestle and mortar, then add the lemon juice and a drizzle of olive oil. Stab the lamb all over with a sharp knife, then push as much of the herb paste as you can into the holes.','Tip the potatoes into a large roasting tin, then toss in the remaining olive oil and any remaining herb paste. Nestle the lamb amongst the potatoes, roast for 20 mins, then reduce the temperature to 180C/fan 160C/gas 4. Roast for 1 hr 15 mins for medium-rare, adding another 15 mins if you prefer your lamb medium. Baste the lamb once or twice with the juices and toss the potatoes. When the lamb is done to your liking, remove from the tin and let it rest. Throw the rest of the oregano in with the potatoes, scoop from the tin and keep warm.','Place the roasting tin over a medium flame, add the canned tomatoes and olives to the pan juices, then simmer for a few mins. Serve the lamb with the potatoes and sauce and a simple salad.'
 
 //       ]
 //     },{
@@ -198,11 +197,11 @@ export const items: ProductInterface[] = [
 //       image: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2020/01/chicken_pasta_bake.jpg?itok=3u5ZUexj',
 //       rating: '5.0',
 //       ingredients: [
-//         '4 tbsp olive oil','1 onion, finely chopped','2 garlic cloves, crushed','¼ tsp chilli flakes','2 x 400g cans chopped tomatoes','1 tsp caster sugar','6 tbsp mascarpone','4 skinless chicken breasts','300g penne','70g mature cheddar, grated','50g grated mozzarella','½ small bunch of parsley, finely chopped'
+        // '4 tbsp olive oil','1 onion, finely chopped','2 garlic cloves, crushed','¼ tsp chilli flakes','2 x 400g cans chopped tomatoes','1 tsp caster sugar','6 tbsp mascarpone','4 skinless chicken breasts','300g penne','70g mature cheddar, grated','50g grated mozzarella','½ small bunch of parsley, finely chopped'
 
 //           ],
 //       methods:[
-//         'Heat 2 tbsp of the oil in a pan over a medium heat and fry the onion gently for 10-12 mins. Add the garlic and chilli flakes and cook for 1 min. Tip in the tomatoes and sugar and season to taste. Simmer uncovered for 20 mins or until thickened, then stir through the mascarpone. ','Heat 1 tbsp of oil in a non-stick frying pan. Season the chicken and fry for 5-7 mins or until the chicken is cooked through. ','Heat the oven to 220C/200C fan/gas 7. Cook the penne following pack instructions. Drain and toss with the remaining oil. Tip the pasta into a medium sized ovenproof dish. Stir in the chicken and pour over the sauce. Top with the cheddar, mozzarella and parsley. Bake for 20 mins or until golden brown and bubbling. '
+        // 'Heat 2 tbsp of the oil in a pan over a medium heat and fry the onion gently for 10-12 mins. Add the garlic and chilli flakes and cook for 1 min. Tip in the tomatoes and sugar and season to taste. Simmer uncovered for 20 mins or until thickened, then stir through the mascarpone. ','Heat 1 tbsp of oil in a non-stick frying pan. Season the chicken and fry for 5-7 mins or until the chicken is cooked through. ','Heat the oven to 220C/200C fan/gas 7. Cook the penne following pack instructions. Drain and toss with the remaining oil. Tip the pasta into a medium sized ovenproof dish. Stir in the chicken and pour over the sauce. Top with the cheddar, mozzarella and parsley. Bake for 20 mins or until golden brown and bubbling. '
 
 //       ]
 //     }

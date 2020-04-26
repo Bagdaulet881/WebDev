@@ -5,37 +5,38 @@
 
             <label for="inputPassword6">Name</label>
             <div class="form-group">
-                <input [(ngModel)]="item.name" type="text" id="inputPassword6" class="form-control">
+                <input #name [(ngModel)]="item.name" type="text" id="inputPassword6" class="form-control">
             </div>
             <label for="inputPassword6">Rating</label>
             <div class="form-group">
-                <input [(ngModel)]="item.rating" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                <input #rating [(ngModel)]="item.rating" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
             <label for="inputPassword6">Time</label>
             <div class="form-group">
-                <input [(ngModel)]="item.time" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                <input #time [(ngModel)]="item.time" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
             <label for="inputPassword6">Level</label>
             <div class="form-group">
-                <input [(ngModel)]="category.name" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                <input placeholder="{{this.getCategoryName(item.category_id)}}" readonly type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
             <label for="inputPassword6">Description</label>
             <div class="form-group">
-                <input [(ngModel)]="item.description" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                <input #description [(ngModel)]="item.description" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
 
             <label for="inputPassword6">Ingredients</label>
 
-            <div class="form-group" *ngFor="let x of item.ingredients; let i = index;trackBy:trackByIdx">
-                <input [(ngModel)]="item.ingredients[i]" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <div class="form-group">
+                <input #ing [(ngModel)]="item.ingredients" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
             <label for="inputPassword6">Methods</label>
 
-            <div class="form-group" *ngFor="let x of item.methods; let i = index;trackBy:trackByIdx">
-                <input [(ngModel)]="item.methods[i]" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <div class="form-group">
+                <input #methods [(ngModel)]="item.methods" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
             </div>
 
-            <button class="btn btn-primary saveBtn" (click)="goBack()">Save and Go back</button>
+            <button class="btn btn-primary saveBtn" (click)="save(item.category_id, name.value, time.value, description.value, rating.value, ing.value, methods.value)">Save and View</button>
+            <button class="btn btn-primary saveBtn" (click)="goBack()">Go back</button>
 
         </div>
         <!-- <small id="passwordHelpBlock" class="form-text text-muted">
@@ -50,15 +51,15 @@
             <div class="main1">
                 <!-- --------------------------------------------------------------------------------------------------------- -->
                 <div class="photo1">
-                    <a title="Ммм да да еда" href="{{item.link}}" target="_blank">
-                        <img class="photoSize" src="{{ item.image }}">
+                    <a title="Ммм да да еда" href="" target="_blank">
+                        <img class="photoSize" src="{{item.image}}">
                     </a>
                 </div>
 
                 <!-- --------------------------------------------------------------------------------------------------------- -->
                 <div class="context1">
                     <h3>
-                        <a id="title" title="Посмотреть на Aliexpress" href="{{item.link}}" target="_blank"> {{ item.name }}</a>
+                        <a id="title" title="Посмотреть на Aliexpress" href="" target="_blank"> {{ item.name }}</a>
                     </h3>
                     <!-- --------------------------------------------------------------------------------------------------------- -->
                     <p *ngIf="item.rating">
@@ -66,7 +67,7 @@
                     </p>
                     <!-- --------------------------------------------------------------------------------------------------------- -->
                     <h6 style="font-weight: bolder;">Cook: </h6>{{item.time}}
-                    <h6 style="font-weight: bolder;">Level: </h6>{{category.name}}
+                    <h6 style="font-weight: bolder;">Level: </h6>{{this.getCategoryName(item.category_id)}}
                     <h6 style="font-weight: bolder;">Description: </h6>
                     <p *ngIf="item.description">
                         <!-- Bakosta -->
@@ -74,11 +75,11 @@
                     </p>
                     <!-- --------------------------------------------------------------------------------------------------------- -->
                     <div class="share1">
-                        <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url={{item.link}}" data-action="share/whatsapp/share">
+                        <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url=" data-action="share/whatsapp/share">
                             <img id="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1024px-WhatsApp_logo-color-vertical.svg.png">
                         </a>
 
-                        <a target="_blank" href="https://t.me/share/url?url={{item.link}}" data-action="share/whatsapp/share">
+                        <a target="_blank" href="https://t.me/share/url?url=" data-action="share/whatsapp/share">
                             <img id="telegram" src="https://image.winudf.com/v2/image1/Y29tLndXaGF0c2FwcGpiXzg2MTY3NTRfaWNvbl8xNTUwNzI3OTE1XzA1OA/icon.png?w=170&fakeurl=1">
                         </a>
                     </div>
@@ -95,7 +96,7 @@
                 <h4>Ingredients</h4>
                 <hr class="new3">
                 <div class="rectangle">
-                    <div *ngFor="let ings of item.ingredients; let indexOf = index;">
+                    <div *ngFor="let ings of this.split(item.ingredients); let indexOf = index;">
                         <div class="ingredientsItems" [style.background]="getColor(indexOf)">
                             {{ings}}
                         </div>
@@ -107,7 +108,7 @@
                 <h4>Methods</h4>
                 <hr class="new3">
                 <div class="method-in">
-                    <div *ngFor="let method of item.methods; let cnt = index;">
+                    <div *ngFor="let method of  this.split(item.methods); let cnt = index;">
                         <div class="method-text">
                             <p><strong>{{cnt+1}}. </strong>{{method}}</p>
                             <hr class="new1">

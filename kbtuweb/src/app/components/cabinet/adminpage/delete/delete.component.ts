@@ -11,6 +11,8 @@ import { CategoryInterface } from 'src/app/database/categoryInterface';
 })
 export class DeleteComponent implements OnInit {
   items: ProductInterface[];
+  itemtmp: ProductInterface;
+  cat: CategoryInterface;
   category2: CategoryInterface;
   categories: CategoryInterface[];
   constructor( private router: Router,
@@ -56,13 +58,15 @@ export class DeleteComponent implements OnInit {
 
 
   
-  deleteCategory(id: number){
-    alert("Delete for Category coming soon!");
+  deleteCategory(prd: CategoryInterface){
+    alert(prd.name + " deleted");
+    this.productService.deleteCategory(prd.id).subscribe(cat => this.cat = cat);
+    this.getCategories();
   }
   deleteProduct(prd: ProductInterface){
     alert(prd.name + " deleted");
-    this.productService.deleteProduct(prd).subscribe(items => this.items = items);
-    // this.getProducts();
+    this.productService.deleteProduct(prd.id).subscribe(items => this.itemtmp = items);
+    this.getProducts();
   }
 
   getProducts(){

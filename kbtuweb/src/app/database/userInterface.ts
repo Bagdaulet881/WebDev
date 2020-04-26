@@ -1,8 +1,9 @@
 export interface UserInterface {
-  name: string;
-  lname: string;
-  login: string;
+  id: number;
+  first_name: string;
+  last_name: string;
+  username: string;
   password: string;
-  isSuperUser: boolean;
+  is_superuser: boolean;
 }
   

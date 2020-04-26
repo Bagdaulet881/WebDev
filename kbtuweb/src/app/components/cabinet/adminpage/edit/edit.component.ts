@@ -1,24 +1,27 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProductService} from  '../../../../services/product.service';
-
+import {ProductInterface} from '../../../../database/productInterface'
+import {CategoryInterface} from '../../../../database/categoryInterface'
+import { categories } from 'src/app/database/category';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  items: any;
-  category2: any;
-  categories: any;
+  items: ProductInterface[]
+  category2: CategoryInterface
+  categories: CategoryInterface[]
+  categorytmp: CategoryInterface
   constructor( private router: Router,
     private route: ActivatedRoute,
     private productService: ProductService
     ) { 
       this.router.events.subscribe((value =>{
-      this.getProducts();
-      this.getCategories();
-      this.getCategory(1);
+        this.getProducts();
+        this.recipeItem();
+        this.getCategories();
       
         // this.getProduct();
         // this.getCategory();
@@ -30,9 +33,10 @@ export class EditComponent implements OnInit {
     this.getProducts();
     this.getCategories();
     // this.getProduct();
-    this.getCategory(1);
+    // this.getCategory(1);
   }
 
+  // ----------------------------------------------------------------------JUST FUNCTIONS----------------------------------------------------------------------
 
   categoryItem(){
     document.getElementById("recipe").classList.remove("active");
@@ -56,6 +60,7 @@ export class EditComponent implements OnInit {
   showEditPanel(){
     document.getElementById("editPanel").style.display = "block";
   }
+  // ----------------------------------------------------------------------GET FUNCTIONS----------------------------------------------------------------------
 
 
   getProducts(){
@@ -63,6 +68,7 @@ export class EditComponent implements OnInit {
   }
   getCategories(){
     this.productService.getCategories().subscribe(categories => this.categories = categories);
+    this.category2 = categories[0]
   }
   getProductsByCategoryId(id: number) {
     // const id = +this.route.snapshot.paramMap.get('id');
@@ -73,7 +79,7 @@ export class EditComponent implements OnInit {
   //   this.productService.getProduct(id).subscribe(item => this.item = item);
   // }
   getCategory(id: number){
-    this.productService.getCategory(id).subscribe(category => this.category2 = category);
+    this.productService.getCategory(id).subscribe(category2 => this.category2 = category2);
   }
   getColor(indexOf:number){
     indexOf++;
@@ -82,5 +88,28 @@ export class EditComponent implements OnInit {
     }else{
       return "rgb(219, 234, 234)";
     }
+  }
+
+
+  saveCategory(id: number, time: string, name: string){
+      class Category implements CategoryInterface{
+        id: number;
+        img_link: string;
+        time: string;
+        name: string;
+      
+      }
+      let cat = new Category();
+
+      cat.id = this.category2.id;
+      cat.name = name;
+      cat.img_link = this.category2.img_link;
+      cat.time = time;
+
+      this.productService.updateCategory(this.category2.id, cat).subscribe(categories => this.categories = categories);
+
+      alert("changes saved!");
+    window.location.reload();
+      
   }
 }

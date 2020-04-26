@@ -27,4 +27,11 @@ export class UsersComponent implements OnInit {
   getUsers(){
     this.userService.getUsers().subscribe(users=> this.users = users);
   }
+  colorSupeUsers(superUser: boolean): string{
+    if(superUser){
+      return "super";
+    }else
+    return "not_super";
+
+  }
 }

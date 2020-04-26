@@ -40,10 +40,8 @@ comment2: CommentInterface
     // this.getCategory();
 
   }
-  split(text:string): any{
-    var splitted = text.split('\',');  
-    return splitted;
-  }
+
+  // ----------------------------------------------------------------------ADD FUNCTIONS----------------------------------------------------------------------
   
   sendComment(login: string, text: string){
     class Comment implements CommentInterface{
@@ -65,12 +63,8 @@ comment2: CommentInterface
     window.location.reload();
 
   }
-  autoIncrement(): number{
-    this.getComments();
-    let nextId = this.allcomments[this.allcomments.length-1].id;
-    nextId++;
-    return nextId;
-  }
+ 
+  // ----------------------------------------------------------------------GET FUNCTIONS----------------------------------------------------------------------
   
   getCommentsByProductId(){
     const id = +this.route.snapshot.paramMap.get('id');
@@ -99,5 +93,16 @@ comment2: CommentInterface
     }else{
       return "rgb(219, 234, 234)";
     }
+  }
+  // ----------------------------------------------------------------------JUST FUNCTIONS----------------------------------------------------------------------
+  autoIncrement(): number{
+    this.getComments();
+    let nextId = this.allcomments[this.allcomments.length-1].id;
+    nextId++;
+    return nextId;
+  }
+  split(text:string): any{
+    var splitted = text.split('\',');  
+    return splitted;
   }
 }
