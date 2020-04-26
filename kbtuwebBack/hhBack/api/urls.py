@@ -54,5 +54,6 @@ urlpatterns = [
 
     path('comments/', comment_list),
     path('comments/<int:comment_id>/', comment_detail),
+
     # ------------------------------------------------
 ]

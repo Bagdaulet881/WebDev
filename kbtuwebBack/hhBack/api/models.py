@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from datetime import datetime, timedelta
 from django.contrib.postgres.fields import ArrayField
+from .managers import ProductsManager
 
 # Create your models here.
 # MY PROJECT MODELS
@@ -13,6 +14,7 @@ class Category(models.Model):
     time = models.CharField(max_length=1000, default='0 hr 15 min')
     name = models.CharField(max_length=1000, default='categoryName')
 
+
     def __str__(self):
         return '{}:{}'.format(self.id, self.name)
 
@@ -23,11 +25,13 @@ class Product(models.Model):
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=1000)
     time = models.CharField(max_length=1000, default='0 hr 15 min')
-    description = models.CharField(max_length=1000, default=' ')
+    description = models.CharField(max_length=1000)
     image = models.CharField(max_length=1000, default='https://i1.imageban.ru/out/2017/12/11/e7afe65c4f3028db5e2127f32740ac3d.jpg')
-    rating = models.CharField(max_length=1000, default='0.0')
+    rating = models.FloatField(default=0.0)
     ingredients = models.CharField(max_length=1000, default=' ')
     methods = models.CharField(max_length=1000, default=' ')
+
+    objects = ProductsManager()
 
     def __str__(self):
         return '{}:{}'.format(self.id, self.name)
@@ -53,11 +57,11 @@ class MyUser(models.Model):
     class Meta:
         verbose_name_plural = 'users'
 
-    name = models.CharField(max_length=100)
-    lname = models.CharField(max_length=100)
-    login = models.CharField(max_length=100)
-    password = models.CharField(max_length=50)
-    isSuperUser = models.BooleanField(default=False)
+    username = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100, default='')
+    password = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=50, default='')
+    is_superuser = models.BooleanField(default=False)
 
     def __str__(self):
         return '{}:{}'.format(self.id, self.login)

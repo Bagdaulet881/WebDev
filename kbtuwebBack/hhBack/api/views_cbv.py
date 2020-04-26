@@ -53,13 +53,12 @@ class UserListAPIView(APIView):
     def get(self, request):
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
-
         return Response(serializer.data)
+
 
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
-
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'error': serializer.errors}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -67,8 +66,8 @@ class UserListAPIView(APIView):
 class UserDetailAPIView(APIView):
     def get_object(self, user_id):
         try:
-            return Category.objects.get(id=user_id)
-        except Category.DoesNotExist as e:
+            return User.objects.get(id=user_id)
+        except User.DoesNotExist as e:
             return Response({'error': str(e)})
 
     def get(self, request, user_id):

@@ -50,8 +50,8 @@ def products_by_categoryId(request, category_id):
 @api_view(['GET'])
 def top_ten_products(request):
     if request.method == 'GET':
-        top_ten = Vacancy.objects.order_by('-salary')[:10]
-        serializer = VacancySerializer(top_ten, many=True)
+        top_ten = Product.objects.get_top_ten_products()
+        serializer = ProductSerializer(top_ten, many=True)
         return Response(serializer.data)                    #TODO
 # -----------------------------------------
 # ---------------COMMENT FBV---------------
@@ -67,6 +67,8 @@ def comment_list(request):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def comment_detail(request, comment_id):
