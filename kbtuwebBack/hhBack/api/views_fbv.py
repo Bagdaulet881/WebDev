@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .models import Company, Vacancy, Product, Comment
+from .models import Company, Vacancy, Product, Comment, Category
 from .serializers import CompanySerializer, VacancySerializer, ProductSerializer, CommentSerializer
 
 
@@ -30,7 +30,15 @@ def product_detail(request, product_id):
         serializer = ProductSerializer(product)
         return Response(serializer.data)
     elif request.method == 'PUT':
-        serializer = ProductSerializer(instance=product, data=request.data, partial=True)
+        # post = request.POST.copy()
+        # # request.POST.get("category_id")
+        # post['category_id'] = category
+        # request.POST = post
+
+        category = Category.objects.only('id').get(id=request.data['category_id'])
+
+        request.data.update({"category_id": category})
+        serializer = Product2Serializer(instance=product, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.update(serializer.instance, request.data)
             return Response(serializer.data)

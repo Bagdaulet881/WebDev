@@ -30,8 +30,8 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username', 'first_name', 'last_name', 'password', 'is_superuser')
 
 class ProductSerializer(serializers.ModelSerializer):
-
-    # category_id = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
+    # POST
+    # category_id = serializers.PrimaryKeyRelatedField(many=False)
     class Meta:
         model = Product
         # fields = '__all__'
@@ -39,7 +39,16 @@ class ProductSerializer(serializers.ModelSerializer):
                   'time', 'description', 'image', 'rating',
                   'ingredients',
                   'methods')
+class Product2Serializer(serializers.ModelSerializer):
 
+    category_id = serializers.PrimaryKeyRelatedField(many=False, read_only=True)
+    class Meta:
+        model = Product
+        # fields = '__all__'
+        fields = ('id', 'category_id', 'name',
+                  'time', 'description', 'image', 'rating',
+                  'ingredients',
+                  'methods')
 class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
